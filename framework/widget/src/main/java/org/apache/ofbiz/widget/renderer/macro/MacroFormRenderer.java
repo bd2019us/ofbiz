@@ -2849,7 +2849,7 @@ public final class MacroFormRenderer implements FormStringRenderer {
         Map<String, Object> paramMap = UtilHttp.getQueryStringOnlyParameterMap(queryString);
         String qbeString = (String) context.get("_QBESTRING_");
         if (qbeString != null) {
-            qbeString = qbeString.replaceAll("&amp;", "&");
+            qbeString = qbeString.replace("&amp;", "&");
             paramMap.putAll(UtilHttp.getQueryStringOnlyParameterMap(qbeString));
         }
         paramMap.put(modelForm.getSortFieldParameterName(), newSortField);
