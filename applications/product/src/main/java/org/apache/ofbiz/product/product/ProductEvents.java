@@ -1044,7 +1044,7 @@ public class ProductEvents {
             return null;
         }
         doubleString = doubleString.trim();
-        doubleString = doubleString.replace(",", "");
+        doubleString = doubleString.replaceAll(",", "");
         if (doubleString.length() < 1) {
             return null;
         }
@@ -1160,7 +1160,7 @@ public class ProductEvents {
             return null;
         }
         bigDecimalString = bigDecimalString.trim();
-        bigDecimalString = bigDecimalString.replace(",", "");
+        bigDecimalString = bigDecimalString.replaceAll(",", "");
         if (bigDecimalString.length() < 1) {
             return null;
         }
